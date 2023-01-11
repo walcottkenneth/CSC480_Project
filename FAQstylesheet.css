@@ -1,7 +1,45 @@
-main {
-    padding-left: 100px;
-    padding-right: 100px;
+body {
+    font-family : Sans-serif;
 }
-aside {
+nav {
+}
+nav a:link, a:visited, a:hover, a:active {
+    color : #04354D;
+    font-weight : bold;
+    text-decoration : none;
+    text-transform : uppercase;
+}
+.row {
+    border: 1px solid black;
+    width : 80%;
+}
+.column1 {
+    background-color : #04354D;
+    border: 1px solid black;
+    list-style : none;
+    width : 20%;
+}
+.column1 ul li a:link, a:visited, a:hover, a:active {
+    color : white;
+    text-decoration: none;
+}
+.column2 {
+    background-color : transparent;
+    border: 1px solid black;
+    list-style : none;
+    width : 30%;
+}
+.column2 a:link, a:visited, a:hover, a:active {
+    color : #41682D;
+    text-decoration : none;
+}
+.column3 {
+    background-color : grey;
+    border: 1px solid black;
     float : right;
+    width : 20%;
+}
+.column3 a:link, a:visited, a:hover, a:active {
+    color : #41682D;
+    text-decoration : none;
 }

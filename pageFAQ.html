@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--- ------------------ HEAD ------------------ -->
         <title>Information Technology | Contra Costa County, CA Official Website</title>
         <link rel="stylesheet" href="FAQstylesheet.css">
         <link rel="stylesheet" href="main.css">
@@ -8,11 +9,12 @@
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
         <script src="main.js"></script>
     </head>
     <body style="background-color: #f0efef;">
-        <div id="navSection">
-        <!--- ------------------NAV BAR ------------------ -->
+        <div class="navBarSection">
+        <!--- ------------------ NAV BAR ------------------ -->
             <nav>
                 <img alt="HomePage" class="bannerObject" src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58316">
                 <a class="navbarItem" href="404page.html">Our County</a>
@@ -22,50 +24,212 @@
                 <a class="navbarItem" href="404page.html">How do i?</a>
             </nav>
         </div>
-            <!--- ------------------ 3 COLUMN MAIN ------------------ -->
-            <div style="background-color: white; box-shadow: 5px 5px 10px GhostWhite; margin-left:20%; margin-right:20%;" class="row">
-                <div style="" class="column1">
-                        <ul style="list-style:none; justify-content: space-between;">
-                            <li class="ulBusiness"><a href="404page.html">Business Units</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Enterprise System Catalog</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Federal Engineering Report (PDF)</a></li>
-                            <li class="ulBusiness"><a href="404page.html">GIS</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Helpdesk</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Mission Statement</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Policies & Contracts</a></li>
-                            <li class="ulBusiness"><a href="404page.html">Word from Chief Information Officer</a></li>
-                        </ul>
+        <!--- ------------------ 3 COLUMN MAIN | ROW ------------------ -->
+        <div style="margin-left:20%; margin-right:20%;" class="row">
+            <!--- ------------------ FIRST COLUMN ------------------ -->
+            <div class="column1">
+                <ul>
+                    <li class="ulBusiness"><a href="404page.html">Business Units</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Enterprise System Catalog</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Federal Engineering Report (PDF)</a></li>
+                    <li class="ulBusiness"><a href="404page.html">GIS</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Helpdesk</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Mission Statement</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Policies & Contracts</a></li>
+                    <li class="ulBusiness"><a href="404page.html">Word from Chief Information Officer</a></li>
+                </ul>
+            </div>
+            <!--- ------------------ SECOND COLUMN ------------------ -->
+            <div class="column2">
+                <!--- ------------------ SUBHOME ORDER ------------------ -->
+                <ul class="pagination">
+                    <li class="page-item"><a href="404page.html">County Home > </a></li>
+                    <li class="page-item"><a href="404page.html">Departments & Offices > </a></li>
+                    <li class="page-item"><a href="404page.html">County Administration > </a></li>
+                    <li class="page-item"><a href="404page.html">Divisions > </a></li>
+                    <li class="page-item"><a href="404page.html">Information Technology</a></li> 
+                </ul>
+                <h4>Frequently Asked Questions</h4>
+                <!--- ------------------ SECOND COLUMN >> FAQ NAV BAR ------------------ -->
+                <nav id="FAQnavbar"> 
+                    <ul>
+                        <li><a href="#performance"> Tips to improve PC performance in Windows</a></li>
+                        <li><a href="#comp_start"> Computer won&apos;t start </a></li>
+                        <li><a href="#mouse_keyboard"> Mouse & Keyboard Issues </a></li>
+                        <li><a href="#monitor"> Monitor Issues</a></li>
+                        <li><a href="#network"> Troubleshooting Wireless Network </a></li>
+                        <li><a href="#ms_password"> Change Microsoft Account Password </a></li>
+                        <li><a href="#zoom_audio"> Zoom Audio Issues </a></li>
+                        <li><a href="#plugin"> Scheduling with Microsoft Outlook plugin for desktop </a></li>
+                    </ul>
+                </nav>
+                <!--- ------------------ FIRST ARTICLE ------------------ -->        
+                <div>
+                    <h5 id="performance"> Tips to improve PC performance in Windows</h5>
+                    <ol>
+                        <li>Unnecessary software to free up disk space. This is done by visiting the programs and features section. From there, you&apos;ll find a record of which apps you&apos;ve used recently, and which take up the most space. After surveying what’s installed, you can decide which programs can be deleted to help improve system performance.</li>
+                        <li>Determine which applications run when your PC boots up. To access Task Manager, press Ctrl-Shift-Esc. A box will appear that lists all the applications you have installed on your computer. It also gives you a detailed account of the amount of RAM each program uses when you start your PC. To make an adjustment, just right-click on the application you want to change to tell it not to run until commanded.</li>
+                        <li>Check for spyware and viruses. To customize how your device is protected with these Windows Security features select Start > Settings > Update & Security > Windows Security and then Virus & threat protection. Under Current threats, select Quick scan. To run an advanced scan in Windows Security, Under Current threats, select Scan options (or in early versions of Windows 10, under Threat history, select Run a new advanced scan). select Full scan (check all files and programs currently on your device). Select Scan now. </li>
+                        <li>Use Disk Cleanup and defragmentation. Open Disk Defragmenter by clicking the Start button. In the search box, type "Disk Defragmenter", and then, in the list of results, click Disk Defragmenter. Under Current status, select the disk you want to defragment. To determine if the disk needs to be defragmented or not, click Analyze disk. Administrator permission required If you&apos;re prompted for an administrator password or confirmation, type the password or provide confirmation. Once Windows is finished analyzing the disk, you can check the percentage of fragmentation on the disk in the Last Run column. If the number is above 10%, you should defragment the disk. Click Defragment disk.  Administrator permission required If you&apos;re prompted for an administrator password or confirmation, type the password or provide confirmation. Disk Defragmenter might take from several minutes to a few hours to finish, depending on the size and degree of fragmentation of your hard disk. You can still use your computer during the defragmentation process.
+                        <li>Delete Web browser Temporary files and website data. </li>
+                    </ol>
+                    <h8>More Resources on this topic: </h8>
+                    <p></p>
+                        <a href="https://www.hp.com/us-en/shop/tech-takes/7-ways-to-improve-computer-performance">
+                        <img src="https://play-lh.googleusercontent.com/kfg71sF9VqFDT9eQVjDe62PPgEZYSX3e3la5C6ESnC9dZ-ND1p0lzoDYI7AMyrjO4fA=s256-rw" title="Visit HP.com - PC Performance"></a>
+                        </p>
+                    <iframe width="510" height="315" src="https://www.youtube.com/embed/m_JXuMxhyi8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div style"" class="column2">
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link navbarItem" href="404page.html">County Home</a></li>
-                            <li class="page-item"><a class="page-link navbarItem" href="404page.html">Departments & Offices</a></li>
-                            <li class="page-item"><a class="page-link navbarItem" href="404page.html">County Administration</a></li>
-                            <li class="page-item"><a class="page-link navbarItem" href="404page.html">Divisions</a></li>
-                            <li class="page-item"><a class="page-link navbarItem" href="404page.html">Information Technology</a></li> 
-                        </ul>
-                        <h2>Information Technology</h2>
-                        <h5><b>Services</b></h5>
-                        <p>We provide a full range of services to the entire Contra Costa County organization. Our team:</p>
-                        <ul>
-                            <li>Manages the central corporate computing complex</li>
-                            <li>Manages a County Wide Area Network (WAN)</li>
-                            <li>Manages numerous Local Area Networks (LANs)</li>
-                            <li>Provides business and technical consulting services to departments and managers throughout the organization</li>
-                        </ul>
+                <!--- ------------------ SECOND ARTICLE ------------------ --> 
+                <div>
+                    <h2 id="comp_start"> Computer won&apos;t start</h2> 
+                    <ol>
+                        <li>Turn off the computer.</li>
+                        <li>Disconnect the AC adapter.</li>
+                        <li>Remove any discs from the disc drive.</li>
+                        <li>Remove memory cards from the card reader slot.</li>
+                        <li> Disconnect all nonessential devices such as printers, scanners, external hard drives, and USB flash drives. NOTE: Do not disconnect your mouse, keyboard, or monitor.</li>
+                        <li>With the AC adapter unplugged, press and hold the power button for approximately 15 seconds.</li>
+                        <li>Reconnect the AC adapter, and then turn on the computer</li>
+                    </ol>
+                    <h8>More Resources on this topic </h8>
+                    <a href="https://support.hp.com/us-en/document/ish_3974055-3873564-16" target="_blank">Article</a> &nbsp;&nbsp;
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/i0mKux2T2DU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> 
                 </div>
-                <div class="column3">
-                        <h5><b>Contact Us</b></h5>
-                        <p><b>Marc Shorr</b></p>
-                        <p>Chief Information Officer</p>
-                        <a href="">Email Marc Shorr</a>
-                        <p><b>Information Technology</b></p>
-                        <p>Physical Address</p>
-                        <button type="button" class="btn btn-light btn-sm">View Map</button>
-                        <p>30 Douglas Drive</p>
-                        <p>Martinez, CA 94553</p>
-                        <a href="">Directions</a>
+                <!--- ------------------ THIRD ARTICLE ------------------ -->
+                <div>
+                    <h2 id="mouse_keyboard"> Mouse & Keyboard Issues</h2> 
+                    <ol>
+                        <li>Look for and remove any packaging tabs from the device. Tabs prevent the device from receiving power.</li>
+                        <li>Check the power connection status: If the device has an On/Off switch, make sure it is set to on.</li>
+                        <li>If the device does not turn on, recharge the battery by connecting the charging cable to a power source, such as a USB charging port on the computer or an external USB power adapter. If the device uses replaceable batteries, install new ones.</li>
+                        <li>Locate the USB receiver for the device. It may already be inserted in a USB port on the computer, or in the original packaging. Some HP Touch and All-in-Ones come with the USB receiver preinstalled in the computer. Or look for a storage container for the receiver inside the device.</li>
+                        <li>Make sure the receiver is inserted in a USB port on the computer. A USB hub might not provide enough power for your device to connect properly.</li>
+                        <li>Turn off any other wireless devices that you are not using, including Bluetooth devices.</li>
+                        <li>Move the mouse closer to the wireless receiver, usually within 30 cm (1 ft).</li>
+                        <li>Make sure there are no objects between the mouse and the wireless receiver. Objects such as TVs, cordless phones, or speakers can weaken wireless signals.</li>
+                        <li>Reset the USB receiver connection based on if it has a Connect button or not.</li>
+                        <li>For Bluetooth devices, make sure Bluetooth is on and keyboard is listed under devices. If not, place the device in discovery mode and click and add device.</li>
+                        <li>Make sure hardware drivers are up to date.</li>
+                    </ol>
+                    <h8>More Resources on this topic </h8>
+                    <a href="https://support.hp.com/us-en/document/ish_1997727-1501908-16" target="_blank">Article (Mouse)</a> &nbsp;&nbsp;
+                    <a href="https://support.hp.com/hk-en/document/ish_1997725-1494908-16">Article (Keyboard)</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=DTTvWC0cI2Q" taget="_blank">  YouTube</a>
+                </div>
+                <!--- ------------------ FOURTH ARTICLE ------------------ -->
+                <div>
+                    <h2 id="monitor"> Monitor Issues</h2> 
+                    <ol>
+                        <li>Check for power by pressing the power button. If the monitors power indicator is off, then the monitor is not receiving power.</li>
+                        <li>Check that the cables are correctly connected. If the power indicator is on, check the cable connection from the monitor to the computer.</li> 
+                        <li>Connect the computer to another monitor to determine if the problem lies with the monitor or the computer.</li>   
+                        <li>Inspect the video cable and video connectors for damage.</li> 
+                    </ol>  
+                    <h8>More Resources on this topic </h8>
+                    <a href="https://support.hp.com/us-en/document/c03518095" target="_blank">Article</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=nDelxxf8mFM" taget="_blank">  YouTube</a>
+                </div>
+                <!--- ------------------ FIFTH ARTICLE ------------------ -->
+                <div>
+                    <h2 id="network"> Troubleshooting Wireless Network</h2> 
+                    <ol>
+                        <li>Check the wireless signal and make sure you are connected to the network.</li>
+                        <li>Update hardware drivers by opening device manager and right clicking on the wireless adapter to update driver.</li> 
+                        <li>Use the Windows Network and Internet Troubleshooter to test and repair the network connection. In the search 
+                            box type and select &quot;find and fix network problem&quot;. Follow the instruction to troubleshoot your network connection.</li> 
+                        <li>Reset the Wireless router by disconnecting the power cord for 20 seconds before reconnecting.</li> 
+                        <li>Run a Windows update. In the search window type and select &quot;check for updates&quot;.</li> 
+                        </ol>
+                    
+                    <p> <h8>More Resources on this topic </h8> </p>
+                    <a href="https://support.hp.com/us-en/document/ish_1997137-1439082-16" target="_blank">Article</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=LE124tLQoAU" taget="_blank">  YouTube</a>
+                </div>
+                <!--- ------------------ SIXTH ARTICLE ------------------ -->
+                <div>
+                    <h2 id="ms_password"> Change Microsoft Account Password</h2> 
+                    <ol>
+                        <li>In the search bar below, type and select &quot;Change your password.&quot;</li>
+                        <li>Online: Micorsoft.com > Select security in the Nav Bar > Password Secuirty > Change my passowrd > Save</li>
+                        </ol>
+                    
+                    <p> <h8>More Resources on this topic </h8> </p>
+                    <a href="https://support.microsoft.com/en-us/account-billing/change-your-microsoft-account-password-fdde885b-86da-2965-69fd-4871309ef1f1" target="_blank">Article</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=j81FfHE2DlY" taget="_blank">  YouTube</a>
+                </div>
+                <!--- ------------------ SEVENTH ARTICLE ------------------ -->
+                <div>
+                    <h2 id="zoom_audio"> Zoom Audio Issues</h2> 
+                    <ol>
+                        <li>Check if the microphone, speakers, or headphones are plugged in and not muted.</li>
+                        <li>Unplug the device, then plug it back in.</li>
+                        <li>If it&apos;s a Bluetooth device, ensure that it is turned on and connected properly.</li>
+                        <li>Make sure that you are using a supported USB device for Zoom. Note: USB devices not listed within the above article 
+                            may still work with Zoom. However, the devices listed are what we recommend for the most optimal experience. Supported USB devices less likely encounter audio issues.</li>
+                        <li>Ensure that no other applications are using the microphone at the same time.</li>
+                        <li>Test and check audio settings. In the zoom app settings, make sure the speaker settings are configured correctly. </li>
+                    </ol>
+                    <p> <h8>More Resources on this topic </h8> </p>
+                    <a href="https://support.zoom.us/hc/en-us/articles/7302459648397-Troubleshooting-audio-issues" target="_blank">Article</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=NK4C2SqEpbY" taget="_blank">  YouTube</a>
+                </div>
+                <!--- ------------------ EIGTH ARTICLE ------------------ -->
+                <div>
+                    <h2 id="plugin"> Scheduling with Microsoft Outlook plugin for desktop</h2> 
+                    <p>NOTE: You can download the Zoom Microsoft Outlook Plugin MSI file from the Download Center. Once the download is complete, 
+                    run the MSI file and follow the install wizard to complete the installation. You will need to restart Outlook before using the Plugin.</p>
+                    <ol>
+                        <li>Add plugin icon in outlook: Outlook options > add-ins >disabled items > zoom outlook plug-in > select enable > select Com add-ins > check zoom outlook plugin box.</li>
+                        <li>Select schedule a meeting button within outlook. </li>
+                        <li>Select desired settings for the meeting (ID, security, video, audio, participants, etc.) </li>
+                    </ol>
+                    <p> <h8>More Resources on this topic </h8> </p>
+                    <a href="https://support.zoom.us/hc/en-us/articles/200881399-Microsoft-Outlook-plugin-desktop-" target="_blank">Article</a> &nbsp;&nbsp;
+                    <a href="https://www.youtube.com/watch?v=dvbfn08Q2kU" taget="_blank">  YouTube</a>
                 </div>
             </div>
+            <div class="column3">
+                <h5><b>Contact Us</b></h5>
+                <p><b>Marc Shorr</b></p>
+                <p>Chief Information Officer</p>
+                <a href="">Email Marc Shorr</a>
+                <p><b>Information Technology</b></p>
+                <p>Physical Address</p>
+                <button type="button" class="btn btn-light btn-sm">View Map</button>
+                <p>30 Douglas Drive</p>
+                <p>Martinez, CA 94553</p>
+                <a href="">Directions</a>
+            </div>
+        </div>
+        <footer>
+            <div class="row" style="margin-left:10%; margin-right:10%; background-color: white;">
+              <div style="float:left; background-color: white; color:black; width: 50%; height:350px; padding: 8px;" class="column">
+              <ul style="list-style:none; justify-content: space-between;">
+              <img alt="Homepage" class="footerObject" height="100px" src=https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58367 width="100"> <!--Need to move image toleft of "Contact Us:"--->
+              <p><b>Contact us: </b><a href="404page.html">Public Information Contacts</a> <!--Links don't show unless you hover over them-- -->
+              <a href="404page.html"> Media Inquiries</a> 
+              <a href="404page.html">Contact Webmaster</a></b></br></p>
+              <li><b>County Administration Building:</b></li>
+              <li>1025 Escobar Street, Martinez, CA 94553</li>
+              <li>1st Floor: Clerk of the Board</li>
+              <li>2nd Floor: Human Resources</li>
+              <li>4th Floor: County Administration</li>
+              <p><br>For all other <a href="404page.html">County departments and offices,</a> <Hyperlink></Hyperlink> see their web pages.</br></p> <!--Link doesn't show unless yo hover over them-- -->
+            </div>
+            <div style="background-color: transparent; width: 100%; padding-left: 45px;" class="column">
+                <ul class="pagination" style="margin-bottom: 25px;">
+            <b>Site Links:</b>
+            <!--Links don't show unless you hover over them-- -->
+            <a class="footer" href="404page.html"><span>Home</a></span>
+            <a class="footer" href="404page.html"><span>Website Accessability</a>
+            <a class="footer" href="404page.html">Contra Costa FOCUS</a>
+            <a class="footer" href="404page.html">Employees</a>
+            <a class="footer" href="404page.html">Legal Terms of Use</a>
+            <a class="footer" href="404page.html">Site Map</a>
+            <a class="footer" href="404page.html">Stay Connected</a>
+            <a class="footer" href="404page.html">Back to Top</a>
+            </div>       
+        </footer>
     </body>
 </html>

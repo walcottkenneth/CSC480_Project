@@ -1,25 +1,25 @@
 body {
     background-color: #f0efef;
-    font-family: Verdana, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, sans-serif;
+    font-family: arial;
 }
 a, a:hover, a:active, a:visited, a:link {
-    color: white;
+    color: black;
 }
-.navBarSection {
+#navSection {
     background-image: url('https://511contracosta.org/wp-content/uploads/2021/11/antioch_bridge.jpg');
-    color: white;
-    height: 200px;
-    margin-bottom: 25px;
+    height: 275px;
 }
-.navBarSection nav {
+#navSection nav {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.7);
     border-bottom: 2px solid gray;
     display: flex;
     font-size: 14px;
     justify-content: space-between;
-    padding: 8px 3% 8px 3%;
-    position: static;
+    padding: .5% 5%;
+}
+#navSection a {
+    color: #04354d;
 }
 .bannerObject {
     height: 68px;
@@ -31,49 +31,76 @@ a, a:hover, a:active, a:visited, a:link {
     text-transform : uppercase;
 }
 .row {
-    background-color: white;
+    background-color: white; 
+    box-shadow: 50px 0px 300px #EEEEEE; 
+    margin-bottom: 50px;
 }
 .column1 {
-    background-color: #04354d;
+    background-color: #04354d; 
     float:left; 
-    height:700px; 
     width: 28%;
 }
 .column1 ul {
-    list-style: none;
+    list-style:none; 
+    justify-content: space-between;
 }
 .column1 ul li {
-    margin: 20px 0;
+    margin: 20px 0px; 
 }
-.column1 ul li a{
+#column1_a {
     color: white;
     font-size: 15px;
 }
 .column2 {
-    background-color: transparent; padding-left: 25px; width: 60%;
-    font-size: 14px;
+    background-color: transparent; 
+    padding-left: 25px;
+    padding-right: 10px; 
+    width: 55%;
 }
 .pagination {
-   font-weight: 100;
-   margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
 }
-.page-item a {
-    font-size: 13px;
-    padding-right: 2px;
-    word-spacing: 3px;
+.pagination a {
+    color: #2F6B3E;
+}
+.column2 div h5 {
+    color: #2F6B3E;
+    margin-top: 10px;
 }
 .column3 {
-   background-color:transparent;
-   float: right;
-   padding: 20px 35px 35px 0px;
-   width: 12%;
+    background-color:transparent;
+    float: right;
+    font-family: arial;
+    font-size: 13px;
+    padding: 20px 35px 35px 0px;
+    width: 17%;
 }
-#FAQnavbar {
-    font-size: 14px;
+.secondRow {
+    background-color:white; 
+    height: 200px; 
+    padding-left: 22%;
+    padding-right: 22%;
 }
-#FAQnavbar a, a:hover, a:active, a:visited, a:link {
-    color: black;
+.secondRow div {
+    float: left;
+    height: 100%;
+    padding-top: 30px;
+    width: 16.5%;
 }
-#FAQnavbar ul li{
-    list-style: none;
+.secondRow div img {
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+    height: 100px; 
+    width: 100px;
+}
+#secondRow_p {
+    color: #04354d;
+    font-weight: bold;
+    text-align: center;
+}
+footer {
+    border-top: 10px solid #f0efef;
 }

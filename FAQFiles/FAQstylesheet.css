@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 a, a:hover, a:active, a:visited, a:link {
     color:white;
 }
@@ -18,7 +18,7 @@ a, a:hover, a:active, a:visited, a:link {
     margin:20px 0;
     color:white;
 }
-=======
+
 body {
     background-color: #f0efef;
     font-family: arial;
@@ -125,4 +125,4 @@ a, a:hover, a:active, a:visited, a:link {
 footer {
     border-top: 10px solid #f0efef;
 }
->>>>>>> 74a3fdf3c0c4127ac2ff7b628a27f10de1602753
+

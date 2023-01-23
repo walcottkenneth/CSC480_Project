@@ -1,0 +1,35 @@
+#createSection {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-left:18%;
+    margin-right:18%;
+    background-color:#04354d;
+}
+
+#createContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:2%;
+    margin-right:2%;
+
+}
+
+#ticketType {
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+#ticketSection {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    margin-left:18%;
+    margin-right:18%;
+    background-color:#04354d;
+}
+
+#ticketContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left:2%;
+    margin-right:2%;
+}
+

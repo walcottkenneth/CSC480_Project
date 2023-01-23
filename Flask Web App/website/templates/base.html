@@ -1,0 +1,130 @@
+<!--- THIS IS OUR BASE TEMPLATE FOR ALL DOCUMENTS 
+Essentially, every document in our web app is going to have 3 parts: The Navbar, The main content section, and our footer
+In our other documents like home.html, login.html, signup.html... we define what will go into the main content section.
+This makes managing our documents, css and code more managable and keeps us from rewriting info. 
+-->
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='FAQstylesheet.css') }}"/>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+    ></script>
+    <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='index.js') }}"
+    ></script>
+    <title>{% block title %}Home{% endblock%}</title>
+</head>
+
+<body>
+    <!---- NAVBAR SECTION-->
+    <div id="navSection">
+        <nav>
+            <img alt="HomePage" class="bannerObject"
+                src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58316">
+            {% if current_user.is_authenticated %}
+            <a class="navbarItem" id="home" href="/">Home</a>
+            <a class="navbarItem" id="logout" href="/logout">Logout</a>
+            {% else %}
+            <a class="navbarItem" id="signup"href="/signup">Sign Up</a>
+            <a class="navbarItem" id="login" href="/login">Login</a>
+            {% endif %}
+        </nav>
+    </div>
+    <!---- NAVBAR SECTION-->
+
+    <!----FLASH MESSAGE SECTION-->
+    <!---- any flash messages will display here (right below the navbar) --->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {%if messages %}
+            {% for category, message in messages %}
+                {% if category =='error' %}
+                    <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif category =='success' %}
+                <div class="alert alert-success alter-dismissable fade show" role="alert">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}{% endfor %}{% endif %}{%endwith%}  
+    <!----FLASH MESSAGE SECTION--> 
+    
+<!---- MAIN CONTENT SECTION --->   
+{%block content%}
+
+
+{%endblock%}
+<!---- MAIN CONTENT SECTION --->  
+
+
+<!---- FOOTER SECTION --->
+<footer>
+    <div style="background-color: white; padding-left:20%; padding-right: 20%;">
+        <div class="column" style="float:left; color:black; width: 10%; height: 100%;">
+            <img alt="Seal" class="footerObject" height="100px"
+                src=https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58367 width="100">
+        </div>
+        <div style="width:50%">
+            <ul style="font-size:14px; list-style:none; justify-content: space-between; text-align:left;">
+                <p>
+                    <b>Contact us: </b><a style="color: black;" href="404page.html">Public Information Contacts</a>
+                    <a style="color: black;" href="404page.html"> Media Inquiries</a>
+                    <a style="color: black;" href="404page.html">Contact Webmaster</a></b></br>
+                </p>
+                <li><b>County Administration Building:</b></li>
+                <li>1025 Escobar Street, Martinez, CA 94553</li>
+                <li>1st Floor: Clerk of the Board</li>
+                <li>2nd Floor: Human Resources</li>
+                <li>3rd Floor: County Counsel</li>
+                <li>4th Floor: County Administration</li>
+                <br>
+                <p>For all other <a style="color: black;" href="404page.html">County departments and offices,</a> see
+                    their web pages.</p>
+            </ul>
+        </div>
+        <div class="column" style="background-color:blue; width:30%"></div>
+    </div>
+    <!--- ------------------ SECOND FOOTER ROW ------------------ -->
+    <div style="background-color: white; color: black; width: 100%;">
+        <ul style="padding-left:26%; padding-right:20%; display:flex; justify-content:space-between; align-items:center; ">
+            <b>Site Links:</b>
+            <a style="color: black;" href="404page.html">Home</a>
+            <a style="color: black;" href="404page.html">Website Accessability</a>
+            <a style="color: black;" href="404page.html">Contra Costa FOCUS</a>
+            <a style="color: black;" href="404page.html">Employees</a></li>
+            <a style="color: black;" href="404page.html">Legal Terms of Use</a>
+            <a style="color: black;" href="404page.html">Site Map</a>
+            <a style="color: black;" href="404page.html">Stay Connected</a>
+            <a style="color: black;" href="404page.html">Back to Top</a>
+        </ul>
+    </div>
+    <div style="background-color: #04354d; width: 100%; height: 50px;">
+        <p style="color: white; text-align: center; padding-top: 10px;">© 2022 Contra Costa County</p>
+    </div>
+    <div style="background-color: white; width: 100%; height: 50px;">
+        <p style="padding-left: 25%; padding-top: 10px;">Government Websites by CivicPlus®</p>
+    </div>
+</footer>
+<!---- FOOTER SECTION --->
+</html>

@@ -5,6 +5,7 @@ from .models import Ticket
 from . import db
 import json
 
+
 #category='error': label for evaluation that simply changes the background color to red to indicate an error
 #category='success': label for evaluation that simply changes the background color to green to indicate successful post
 #flash is a method to literally flash a message at the top, takes two parameters ("string to return", category of evaluation)
@@ -15,7 +16,8 @@ import json
 #what happens when we arrive at our endpoint
 def home():
     #check request type
-    if request.method =='POST':
+    if request.method =='POST' and 'createTicket' in request.form:
+        #if user clicks add ticket
         #return our passed variables through flask
         ticketType = request.form.get('ticketType')
         ticketComments = request.form.get('ticketComments')
@@ -30,9 +32,16 @@ def home():
             db.session.add(new_ticket)
             db.session.commit()
             flash('Ticket Created!', category = 'success')
+        
+    if request.method =='POST' and "changeStatus" in request.form:
+        newStatus = request.form.get('status')
+        print(newStatus)
+        ticketID = request.form.get('ticketID')
+        print(ticketID)
+        Ticket.query.filter_by(ticketID = ticketID).update(dict(Status=newStatus))
+        db.session.commit()
     #returns our html document for the current user authentication
     return render_template("home.html", user=current_user)
-
 #route for deleting a ticket... only accepts a post request, as we don't have an endpoint
 @views.route('/delete-ticket', methods=['POST'])
 #what happens when we call this request

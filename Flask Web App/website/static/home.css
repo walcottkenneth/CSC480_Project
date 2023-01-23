@@ -1,8 +1,6 @@
 #createSection {
     padding-bottom: 5px;
     padding-top: 10px;
-    margin-left:18%;
-    margin-right:18%;
     background-color:#04354d;
 }
 
@@ -21,8 +19,6 @@
 #ticketSection {
     padding-bottom: 5px;
     padding-top: 10px;
-    margin-left:18%;
-    margin-right:18%;
     background-color:#04354d;
 }
 
@@ -33,3 +29,24 @@
     margin-right:2%;
 }
 
+#userPane {
+    margin-left: 2%;
+    width:15%;
+    background-color:#04354d;
+}
+
+#ticketPane {
+    margin-left:5%;
+    width:73%;
+    background-color: transparent;
+    margin-right:5%;
+}
+
+#collapseable {
+    background-color: transparent;
+}
+
+.card {
+    background-color: transparent;
+    color:white;
+}

@@ -42,6 +42,7 @@ def home():
         db.session.commit()
     #returns our html document for the current user authentication
     return render_template("home.html", user=current_user)
+
 #route for deleting a ticket... only accepts a post request, as we don't have an endpoint
 @views.route('/delete-ticket', methods=['POST'])
 #what happens when we call this request
@@ -59,7 +60,12 @@ def delete_ticket():
             db.session.commit()
     return jsonify({})
 
-#@views.route('/intTicketHub', methods=['GET','POST'])
-#def pickTicket():
-    #if (request.method == 'POST'):
-        #Ticket.
+@views.route('/empTicketHub', methods=['GET','POST'])
+def pickTicket():    
+    tickets = Ticket.query.filter_by(employeeID = None)
+    for ticket in tickets:
+        print(ticket)
+
+    if (request.method == 'POST'):
+        pass
+    return render_template("empTicketHub.html", tickets=tickets)

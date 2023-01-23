@@ -8,70 +8,125 @@ what else?
 -->
 <h1 align="center">Tickets</h1>
 
-<div id="createSection">
-    <div id="createContainer">
-        <p style="color:white;" align="center">New Ticket</p>
-        <form method="POST">
-            <input type="hidden" name="createTicket">
-            <select name="ticketType" id="ticketType" style="width:100%">
-                <option>General issue</option>
-                <option>My pc wont turn on</option>
-                <option>I don't know how to log in!!!</option>
-                <option>monitor wont turn on</option>
-            </select>
-            <textarea name ="ticketComments" id="ticketComments" class="form-control" placeholder="Enter text..."></textarea>
-            <br/>
-            <div align="right">
-                <button type = "submit" class="btn btn-primary">Add Ticket</button>
+<div class="row">
+    <div class="column" id="userPane">
+        <center><h2 style="color:white;">Welcome, {{ user.firstName }}</h2></center>
+        <div id="accordion">
+            <div class="card">
+              <div id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:white;">
+                        Profile
+                    </button>
+                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" align="right" style="color:white;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-expand" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M3.646 9.146a.5.5 0 0 1 .708 0L8 12.793l3.646-3.647a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 0-.708zm0-2.292a.5.5 0 0 0 .708 0L8 3.207l3.646 3.647a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 0 0 0 .708z"/>
+                        </svg>
+                    </button>
+                </h5>
+              </div>
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Section 1!</p>
+                </div>
+              </div>
             </div>
-        </form>
+            <div class="card">
+              <div class="" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Section 2!</p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </button>
+                </h5>
+              </div>
+              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    <p>Section 3!</p>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
-</div>
-<br/>
-
-<div id="ticketSection">
-    <div id="ticketContainer">
-        <ul class="list-group list-group-flush"  id="tickets">
-            {% for ticket in user.tickets %}
-                <li class = "list-group-item" style="border-radius: 5px;">
-                    <div class="row">
-                        <div class="column" style="width:90%" id="ticketLeft">
-                            <p style="margin-bottom:1px;"><b>{{ ticket.ticketType }}</b></p>
-                            <p style="font-size:13px; color:grey; margin-top:1px;" name="ticketID" id="ticketID">{{ticket.ticketID}}</p>
-                            {{ ticket.ticketComments }}
-                        </div> 
-                        <div class="column" style="width:9%" >
-                            {% if ticket.Status == 'Active' %}
-                            <p align="right" style="color:rgb(13, 216, 13)">
-                            {% elif ticket.Status == 'Pending' %}
-                            <p align="right" style="color:rgb(252, 227, 8)">
-                            {% else %}
-                            <p>
-                            {% endif %}
-                            {{ ticket.Status }}</p>
-                            <button type="button" class="close" onClick="delete_ticket({{ticket.ticketID}})">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
-                                </svg>
-                            </button>
-                            <form method="POST">
-                                <input type="hidden" name="changeStatus" id="changeStatus">
-                                <input type="hidden" name="ticketID" id="ticketID" value="{{ticket.ticketID}}">
-                                <select name="status" id="status">
-                                    <option>Active</option>
-                                    <option>Pending</option>
-                                </select>
-                                <div align="right">
-                                    <button type = "submit" class="btn btn-primary">update</button>
-                                </div>
-                            </form>
-                        </div>
+    <div class="column" id="ticketPane">
+        <div id="createSection">
+            <div id="createContainer">
+                <p style="color:white;" align="center">New Ticket</p>
+                <form method="POST">
+                    <input type="hidden" name="createTicket">
+                    <select name="ticketType" id="ticketType" style="width:100%">
+                        <option>General issue</option>
+                        <option>My pc wont turn on</option>
+                        <option>I don't know how to log in!!!</option>
+                        <option>monitor wont turn on</option>
+                    </select>
+                    <textarea name ="ticketComments" id="ticketComments" class="form-control" placeholder="Enter text..."></textarea>
+                    <br/>
+                    <div align="right">
+                        <button type = "submit" class="btn btn-primary">Add Ticket</button>
                     </div>
-                </li>
-                <br/>
-            {% endfor %}
+                </form>
+            </div>
+        </div>
+        <br/>
+
+        <div id="ticketSection">
+            <div id="ticketContainer">
+                <ul class="list-group list-group-flush"  id="tickets">
+                    {% for ticket in user.tickets %}
+                        <li class = "list-group-item" style="border-radius: 5px;">
+                            <div class="row">
+                                <div class="column" style="width:90%" id="ticketLeft">
+                                    <p style="margin-bottom:1px;"><b>{{ ticket.ticketType }}</b></p>
+                                    <p style="font-size:13px; color:grey; margin-top:1px;" name="ticketID" id="ticketID">{{ticket.ticketID}}</p>
+                                    {{ ticket.ticketComments }}
+                                </div> 
+                                <div class="column" style="width:9%" >
+                                    {% if ticket.Status == 'Active' %}
+                                    <p align="right" style="color:rgb(13, 216, 13)">
+                                    {% elif ticket.Status == 'Pending' %}
+                                    <p align="right" style="color:rgb(252, 227, 8)">
+                                    {% else %}
+                                    <p>
+                                    {% endif %}
+                                    {{ ticket.Status }}</p>
+                                    <button type="button" class="close" onClick="delete_ticket({{ticket.ticketID}})">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                        </svg>
+                                    </button>
+                                    <form method="POST">
+                                        <input type="hidden" name="changeStatus" id="changeStatus">
+                                        <input type="hidden" name="ticketID" id="ticketID" value="{{ticket.ticketID}}">
+                                        <select name="status" id="status">
+                                            <option>Active</option>
+                                            <option>Pending</option>
+                                        </select>
+                                        <div align="right">
+                                            <button type = "submit" class="btn btn-primary">update</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <br/>
+                    {% endfor %}
+            </div>
+        </div>
     </div>
 </div>
-
 <br/>
 {%endblock%}

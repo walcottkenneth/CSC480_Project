@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request, flash, get_flashed_messages, redirect, url_for
-from .models import User
+from .models import User, Employee
 from werkzeug.security import generate_password_hash, check_password_hash
 from . import db
 from flask_login import login_user, login_required, logout_user, current_user
@@ -62,10 +62,14 @@ def signup():
             flash('Password do not match', category = 'error')
             pass
         else:
-            flash('Account Created!', category = 'success')
-            new_user = User(email = email, firstName = firstName, password=password1)
-            db.session.add(new_user)
-            db.session.commit()
+            if request.form.getlist('employee')[0] == 'on':
+                new_employee = Employee(email = email, firstName = firstName, password=password1)
+                db.session.add(new_employee)
+                db.session.commit()
+            else:
+                new_user = User(email = email, firstName = firstName, password=password1)
+                db.session.add(new_user)
+                db.session.commit()
             flash('Account Created!', category='success')
             login_user(new_user, remember=True)
             return redirect(url_for('views.home', user=current_user))

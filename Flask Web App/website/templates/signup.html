@@ -2,54 +2,62 @@
 {% block title %}Sign up{% endblock%}
 {%block content%} 
 
-<br/>
+<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}"/>
+ 
 
-<div style="margin-left:10%; margin-right:10%; background-color:#04354d; color:white">
-    <form method="POST">
-        <h3 align="center" style="color:white">Sign up</h3>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input 
-            type="email" 
-            class="form-control" 
-            id="email" 
-            name="email" 
-            placeholder="Enter Email"
-            />
-        </div>
-        <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input 
-            type="firstName" 
-            class="form-control" 
-            id="firstName" 
-            name="firstName" 
-            placeholder="Enter First Name"
-            />
-        </div>
-        <div class="form-group">
-            <label for="password1">Password</label>
-            <input 
-            type="password1" 
-            class="form-control" 
-            id="password1" 
-            name="password1" 
-            placeholder="Enter Password"
-            />
-        </div>
-        <div class="form-group">
-            <label for="password2">Confirm Password</label>
-            <input 
-            type="password2" 
-            class="form-control" 
-            id="password2" 
-            name="password2" 
-            placeholder="Confirm Password"
-            />
-        </div>
-        <br/>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+<div class="row" id="mainPane" style="color:white;">
+    <div class="column" id="loginPanel">
+        <form method="POST">
+            <h3 align="center" style="color:white">Sign up</h3>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                placeholder="Enter Email"
+                />
+            </div>
+            <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input 
+                type="firstName" 
+                class="form-control" 
+                id="firstName" 
+                name="firstName" 
+                placeholder="Enter First Name"
+                />
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input 
+                type="password1" 
+                class="form-control" 
+                id="password1" 
+                name="password1" 
+                placeholder="Enter Password"
+                />
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input 
+                type="password2" 
+                class="form-control" 
+                id="password2" 
+                name="password2" 
+                placeholder="Confirm Password"
+                />
+            </div>
+            <br/>
+            <input type="checkbox" id="employee" name="employee">
+            <label for="employee">I am an employee</label><br/><br/>
+            <button type="submit" class="btn btn-primary btn-login">Submit</button>
+        </form>
+    </div>
+    <div class="column" id="imagePanel">
+        <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/c6d9f3a9595db00a00788776943b435556303aea/big-9f1b5b31e9c3985ecb9c7eda09cf206f.jpg">
+    </div>
 </div>
 <br/>
 {%endblock%}

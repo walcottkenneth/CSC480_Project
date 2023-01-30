@@ -1,0 +1,24 @@
+.secondRow {
+    background-color:white; 
+    height: 200px; 
+    padding-left: 22%;
+    padding-right: 22%;
+}
+.secondRow div {
+    float: left;
+    height: 100%;
+    padding-top: 30px;
+    width: 16.5%;
+}
+.secondRow div img {
+    margin-left: auto; 
+    margin-right: auto;
+    display: block; 
+    height: 100px; 
+    width: 100px;
+}
+#secondRow_p {
+    color: #04354d;
+    font-weight: bold;
+    text-align: center;
+}

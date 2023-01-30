@@ -62,7 +62,7 @@ def signup():
             flash('Password do not match', category = 'error')
             pass
         else:
-            if request.form.getlist('employee')[0] == 'on':
+            if request.form.getlist('employee') == ['on']:
                 new_employee = Employee(email = email, firstName = firstName, password=password1)
                 db.session.add(new_employee)
                 db.session.commit()

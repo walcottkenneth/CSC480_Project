@@ -1,17 +1,28 @@
 {% extends "base.html" %}
-{% block title %}Sign up{% endblock%}
-{%block content%} 
+{% block title %}Sign up | Contra Costa County, CA Official Website{% endblock%}
+{%block content%}
 
-<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}"/>
- 
+<div class="mainContent" style="box-shadow: 50px 0px 300px #EEEEEE; margin-bottom: 50px;display: flex; background-color: white; margin-left: 20%; margin-right: 20%; height: 650px;">
+    
+    <div class="rightSideBar" style="background-color: #04354d; width: 30%; height: 100%;">
+        <ul style="list-style:none; justify-content: space-between;">
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/635/Business-Units">Business Units</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/6176/Enterprise-System-Catalog">Enterprise System Catalog</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/DocumentView.asp?DID=1700">Federal Engineering Report (PDF)</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/1818/GIS">GIS</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/5439/Helpdesk">Helpdesk</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/672/Mission-Statement">Mission Statement</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/666/Policies-Contracts">Policies & Contracts</a></li>
+            <li style="margin: 20px 0px;"><a style="color: white;font-size: 15px;" href="https://www.contracosta.ca.gov/665/Word-from-Chief-Information-Officer">Word from Chief Information Officer</a></li>
+        </ul>
+    </div>
 
-<div class="row" id="mainPane" style="color:white;">
-    <div class="column" id="loginPanel">
+    <div class="center" style="width: 50%; height: 100%; padding-top: 20px; background-color: transparent; padding-left: 40px; padding-right: 10px;">
         <form method="POST">
-            <h3 align="center" style="color:white">Sign up</h3>
+            <h1 style="font-weight: 600; font-size: 21.6px; color: #04354d; font-family: 'Arial Narrow', Arial, sans-serif;">SIGN UP</h1>
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input 
+                <input style="width: 200px;" 
                 type="email" 
                 class="form-control" 
                 id="email" 
@@ -21,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label for="firstName">First Name</label>
-                <input 
+                <input style="width: 200px;" 
                 type="firstName" 
                 class="form-control" 
                 id="firstName" 
@@ -31,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="password1">Password</label>
-                <input 
+                <input style="width: 200px;" 
                 type="password1" 
                 class="form-control" 
                 id="password1" 
@@ -41,23 +52,42 @@
             </div>
             <div class="form-group">
                 <label for="password2">Confirm Password</label>
-                <input 
+                <input style="width: 200px;" 
                 type="password2" 
                 class="form-control" 
                 id="password2" 
                 name="password2" 
                 placeholder="Confirm Password"
                 />
-            </div>
-            <br/>
+            </div><br/>
             <input type="checkbox" id="employee" name="employee">
             <label for="employee">I am an employee</label><br/><br/>
             <button type="submit" class="btn btn-primary btn-login">Submit</button>
         </form>
     </div>
-    <div class="column" id="imagePanel">
-        <img src="https://cdn.kimkim.com/files/a/content_articles/featured_photos/c6d9f3a9595db00a00788776943b435556303aea/big-9f1b5b31e9c3985ecb9c7eda09cf206f.jpg">
+
+    <div class="leftSideBar" style="width: 20%; height: 100%; background-color: transparent; font-family: arial; font-size: 13px; padding: 20px 35px 35px 0px;">
+        <h5 style="font-size: bold;">Contact Us</h5>
+        <p style="color: #2F6B3E; font-weight: bold;">Marc Shorr</p>
+        <p>Chief Information Officer</p>
+        <a style="color: #2F6B3E;" href="emailto:Marc.Shorr@doit.cccounty.us">Email Marc Shorr</a><br><br>
+        <p style="color: #2F6B3E; font-weight: bold;">Information Technology</p>
+        <p style="font-weight: bold;">Physical Address</p>
+        <form action="">
+            <button src="images/location-pin.png" alt="location pin" width="15" height="15">View Map
+                <input type="hidden" name="location" value="" />
+            </button>
+        </form>
+        <p>30 Douglas Drive</p>
+        <p>Martinez, CA 94553</p><br>
+        <a style="color: #2F6B3E;" href="">Directions</a><br>
+        <p>Phone: (925) 313-1200</p>
+        <p>Fax: (925) 313-1459</p>
+        <p>Phone: 925-313-1200</p><br>
+        <p style="color: #2F6B3E; font-weight: bold;">Hours</p>
+        <p>Monday through Friday</p>
+        <p>8 a.m. to 5 p.m.</p>
+        <a href="">Directory</a>
     </div>
 </div>
-<br/>
 {%endblock%}

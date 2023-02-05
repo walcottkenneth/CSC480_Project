@@ -9,7 +9,6 @@
     margin-bottom: 5px;
     margin-left:2%;
     margin-right:2%;
-
 }
 
 #ticketType {
@@ -24,15 +23,8 @@
 
 #ticketContainer {
     margin-top: 5px;
-    margin-bottom: 5px;
     margin-left:2%;
     margin-right:2%;
-}
-
-#userPane {
-    margin-left: 2%;
-    width:15%;
-    background-color:#04354d;
 }
 
 #ticketPane {

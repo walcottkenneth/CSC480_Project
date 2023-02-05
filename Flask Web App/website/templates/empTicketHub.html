@@ -4,7 +4,7 @@
 ​
 ​
 <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"/>
-<center><h1>Unclaimed Tickets</h1></center>
+<h1 style="text-align: center;">Unclaimed Tickets</h1>
 <div id="ticketSection">
     <div id="ticketContainer">
         <ul class="list-group list-group-flush"  id="tickets">
@@ -18,15 +18,17 @@
                         </div> 
                         <div class="column" style="width:9%" >
                             {% if ticket.Status == 'Active' %}
-                            <p align="right" style="color:rgb(13, 216, 13)">
+                            <p style="text-align: right; color: #e60012;">
                             {% elif ticket.Status == 'Pending' %}
-                            <p align="right" style="color:rgb(252, 227, 8)">
+                            <p style="text-align: right; color: #ffd700;">
+                            {% elif ticket.Status == 'Complete' %}
+                            <p style="text-align: right; color: #019a66;">
                             {% else %}
                             <p>
                             {% endif %}
                             {{ ticket.Status }}</p>
                             <form method="POST">
-                                <button align="right" type="submit" class="btn btn-primary">Take</button>
+                                <button style="text-align: right;" type="submit" class="btn btn-primary">Take</button>
                             </form>
                         </div>
                     </div>

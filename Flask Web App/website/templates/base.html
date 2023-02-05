@@ -1,4 +1,16 @@
 <!--- THIS IS OUR BASE TEMPLATE FOR ALL DOCUMENTS 
+All documents that contain the  will inherit this template document and all link references.
+    - All documents that extend from this will contain the exact same structure of the NavBar and the Footer.
+    - Note: this will pass bootstrap classes to our document, as it is inherited from this document. 
+
+
+ **Put stuff you want to see between these tags**
+
+This is our reserved block space where we can put anything we want... login template, home page, sign up... it will inherit the NavBar and footer.
+Example: In our end points we can call the "login.html" page that extends from "base.html" and it will contain the NavBar, our login page, and our footer, 
+            in that order as we have defined it.
+-->
+<!--- THIS IS OUR BASE TEMPLATE FOR ALL DOCUMENTS 
 Essentially, every document in our web app is going to have 3 parts: The Navbar, The main content section, and our footer
 In our other documents like home.html, login.html, signup.html... we define what will go into the main content section.
 This makes managing our documents, css and code more managable and keeps us from rewriting info. 

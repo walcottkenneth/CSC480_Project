@@ -9,6 +9,8 @@ This makes managing our documents, css and code more managable and keeps us from
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='FAQstylesheet.css') }}"/>
+    <link rel="stylesheet" href="/Flask Web App/website/static/base.css"/>
+    <link rel="county icon" href="https://www.contracosta.ca.gov/images/favicon.ico"/>
     <script
     src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -49,6 +51,7 @@ This makes managing our documents, css and code more managable and keeps us from
     </div>
     <!---- NAVBAR SECTION-->
 
+     <!---- NAVBAR SECTION-->
     <!----FLASH MESSAGE SECTION-->
     <!---- any flash messages will display here (right below the navbar) --->
     {% with messages = get_flashed_messages(with_categories=true) %}
@@ -80,48 +83,9 @@ This makes managing our documents, css and code more managable and keeps us from
 
 
 <!---- FOOTER SECTION --->
-    <div class="secondRow" style="background-color: white; width: 100%; height: 200px; padding-left: 22%; padding-right: 22%;">
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="http://64.166.146.245/agenda_publish.cfm?id=&amp;mt=ALL" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58325">
-    <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Board &amp; District Agendas</p>
-        </a>
-    </div>
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="https://www.contracosta.ca.gov/agendacenter" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58322">
-        <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Agenda Center</p>
-        </a>
-    </div>
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="https://www.contracosta.ca.gov/7281" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58337">
-        <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Permits</p>
-        </a>
-    </div>
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="https://www.governmentjobs.com/careers/contracosta" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58329">
-        <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Jobs</p>
-        </a>
-    </div>
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="https://www.contracosta.ca.gov/6086" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58344">
-        <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Video/Media</p>
-        </a>
-    </div>
-    <div style = "float: left; height: 100%; padding-top: 30px; width: 16.5%;">
-        <a href="https://www.contracosta.ca.gov/7218/Tax-Portal" target="_self">
-        <img style = "margin-left: auto; margin-right: auto; display: block; height: 100px; width: 100px;" src="https://contracosta.ca.gov/ImageRepository/Document?documentID=58341">
-        <p style ="color: #04354D; font-weight: bold; text-align: center;" id="secondRow_p">Taxes</p>
-        </a>
-    </div>
-</div>
-</body>
 <footer>
-    <div class="row" style ="background-color: white; padding-left:20%; padding-right: 10%; padding-top: 2%;">
-        <div class = "column" style="float:left; color:black; width: 10%; height:100%;">
+    <div class="row" style ="background-color: white; padding-left:20%; padding-right: 10%; padding-top: 2%; font-size: 14px;">
+        <div class = "column" style="float:left; color:black; width: 5%; height:100%;">
             <img alt ="Seal" height="100px"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58367" width="100px">
         </div>
         <div class="column" style="width:50%">
@@ -140,19 +104,19 @@ This makes managing our documents, css and code more managable and keeps us from
                 </p>
             </ul>
         </div>
-        <div class="column" style="background-color:white; width:40%;">
-            <ul style=  "padding-left:10%; padding-right:10%; display:flex; justify-content:space-between; align-items:right;">
+        <div class="column" style="background-color:white; width:30%;">
+            <ul style=  "padding-left:15%;  display:flex; justify-content:space-between; align-items:right;">
             <img style = "text-align:right; width:35px; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=75338">   
-            <a style ="display:inline-block; margin: 5px;" href="https://www.contracosta.ca.gov/8570">Accessibility</a>
-            <a href="https://www.twitter.com" target="_blank" style="width: 8%;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58353"></a>  
-            <a href="https://nextdoor.com/agency-city/ca/contra-costa-county/" target="_blank" style="width: 8%;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=61474"></a>
-            <a href="https://www.youtube.com/channel/UCD1z6XC8_fqZXP3HayI-kQA" target="_blank" style="width: 8%;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58780"></a>
-            <a href="https://www.linkedin.com/company/contra-costa-county" target="_blank" style="width: 8%;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58349"></a>
+            <a style ="display:inline-block;" href="https://www.contracosta.ca.gov/8570">Accessibility</a>
+            <a href="https://www.twitter.com" target="_blank" style="width: auto;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58353"></a>  
+            <a href="https://nextdoor.com/agency-city/ca/contra-costa-county/" target="_blank" style="width:auto"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=61474"></a>
+            <a href="https://www.youtube.com/channel/UCD1z6XC8_fqZXP3HayI-kQA" target="_blank" style="width: auto;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58780"></a>
+            <a href="https://www.linkedin.com/company/contra-costa-county" target="_blank" style="width: auto;"><img style = "margin-left: auto; width: 100%; display:block;"src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58349"></a>
         </ul>
         </div>
    </div>
     <!---- second row -->
-    <div style="background-color: white; width: 100%; padding-left: 45px;">
+    <div style="background-color: white; width: 100%; padding-left: 6%;font-size: 15px;">
         <ul style="padding-left:20%; padding-right:20%; display:flex; justify-content:space-between; align-items:center;">
             <b>Site Links:</b>
             <a href="https://www.contracosta.ca.gov/">Home</a>
@@ -165,8 +129,8 @@ This makes managing our documents, css and code more managable and keeps us from
             <a href="https://www.contracosta.ca.gov/195/Information-Technology#outer-wrap">Back to Top</a>
         </ul>
     </div>
-    <div style="background-color: rgb(6, 6, 56); color: white; width:100%; height:55px; padding-top: 10px; text-align:center;">
-        <p>&copy; 2023 Contra Costa County</p>        
+    <div style="background-color: rgb(6, 6, 56); color: white; width:100%; height:55px; padding-top: 15px; text-align:center;">
+        <p><img src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58370"> &copy; 2023 Contra Costa County</p>        
     </div>
     <div style="background-color: white; width:100%; height:45px; padding-top: 10px; padding-left: 25%;">
         <p><img src="https://www.contracosta.ca.gov/ImageRepository/Document?documentID=58368" width=30;> Government Websites by CivicPlus &reg;</p>        

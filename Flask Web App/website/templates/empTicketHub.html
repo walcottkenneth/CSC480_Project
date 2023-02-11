@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block title %}Employee Ticket Hub{% endblock%}
 {%block content%} 
-<<<<<<< HEAD
 
-
-=======
-​
-​
->>>>>>> df9b32185b24c270424a57a63caa54dd362e6103
 <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}"/>
+<!----
+Hub for Employees to view all unclaimed tickets. 
+Displays a list of all tickets in our database that do not have a uidEmployee assigned.
+
+TODO:
+    - show all tickets unclaimed that relate to a department rather than all unclaimed.
+-->
 <h1 style="text-align: center;">Unclaimed Tickets</h1>
 <div id="ticketSection">
     <div id="ticketContainer">
@@ -33,7 +34,7 @@
                             {% endif %}
                             {{ ticket.Status }}</p>
                             <form method="POST">
-                                <button style="text-align: right;" type="submit" class="btn btn-primary">Take</button>
+                                <button align="right" type="submit" class="btn btn-primary">Take</button>
                             </form>
                         </div>
                     </div>
@@ -44,31 +45,6 @@
 </div>
 <br/>
 {% endblock %}
-Collapse
-
-
-
-white_check_mark
-eyes
-raised_hands
-React
-Reply
-
-
-
-
-
-
-
-
-
-
-
-
-Message csc480
-
-
-
 
 
 

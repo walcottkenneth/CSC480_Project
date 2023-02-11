@@ -11,7 +11,7 @@ what else?
 <div class="mainContent" style="box-shadow: 50px 0px 300px #EEEEEE; margin-bottom: 5px; margin-left: 20%; margin-right: 20%; background-color:white; display: flex; min-height: 650px;">
     <!-- ---------- RIGHT SIDEBAR ---------- -->
     <div class="rightSideBar" style="width: 25%; min-height: 650px; background-color: #04354d;" id="userPane">
-        <h2 style="padding-top: 10px; padding-bottom: 10px; text-align: center; color:white;">Welcome, {{ user.firstName }}</h2>
+        <h4 style="padding-top: 30px; padding-bottom: 10px; text-align: center; color:white;">Welcome, {{ user.firstName }}</h4>
         <div id="accordion">
             <div class="card">
                 <div id="headingOne">
@@ -81,34 +81,36 @@ what else?
                 <p style="color:black; text-align: center;">New Ticket</p>
                 <form method="POST">
                     <input type="hidden" name="createTicket">
-                    <p style="width: 20%; float: left; color: black;">Ticket Type</p>
-                    <select name="ticketType" id="ticketType" style="width:80%; float: right;">
-                        <option>PeopleSoft Password Reset</option>
-                        <option>SuperSession Password Reset</option>
-                        <option>VPN Pin Reset</option>
-                        <option>VPN Assignment</option>
-                        <option>Track-it Reports</option>
-                        <option>Kronos Access</option>
-                        <option>Map Drive</option>
-                        <option>Software installation</option>
-                        <option>URL Allow List</option>
-                        <option>New Email Account</option>
-                        <option>Mailbox Access - Access/ Removal</option>
-                        <option>MFA</option>
-                        <option>GAL</option>
-                        <option>Email Domain - Allow/Deny Request</option>
-                        <option>Phishing Attempt</option>
-                    </select>
-                    <p style="text-align: left; width: 20%; float: left; color: black;">Department</p>
-                    <select name="ticketDept" id="ticketDept" style="width:60%; float: right;">
-                        <option>Help Desk</option>
-                        <option>Enterprise System HRMS</option>
-                        <option>Network & Endpoint Services</option>
-                        <option>Enterprise Infrastructure</option>
-                        <option>NES Enterprise Administrators</option>
-                    </select>
+                    <p style="width: 100%; float: left; color: black;">Ticket Type
+                        <select name="ticketType" id="ticketType" style="width:80%; float: right;">
+                            <option>PeopleSoft Password Reset</option>
+                            <option>SuperSession Password Reset</option>
+                            <option>VPN Pin Reset</option>
+                            <option>VPN Assignment</option>
+                            <option>Track-it Reports</option>
+                            <option>Kronos Access</option>
+                            <option>Map Drive</option>
+                            <option>Software installation</option>
+                            <option>URL Allow List</option>
+                            <option>New Email Account</option>
+                            <option>Mailbox Access - Access/ Removal</option>
+                            <option>MFA</option>
+                            <option>GAL</option>
+                            <option>Email Domain - Allow/Deny Request</option>
+                            <option>Phishing Attempt</option>
+                        </select>
+                    </p>
+                    <p style="text-align: left; width: 100%; float: left; color: black;">Department
+                        <select name="ticketDept" id="ticketDept" style="width: 80%; float: right;">
+                            <option>Help Desk</option>
+                            <option>Enterprise System HRMS</option>
+                            <option>Network & Endpoint Services</option>
+                            <option>Enterprise Infrastructure</option>
+                            <option>NES Enterprise Administrators</option>
+                        </select>
+                    </p>
                     <!-- ---------- NEW TICKET PT.2 | DESCRIPTION & SUBMIT ---------- -->
-                    <textarea style="margin-bottom: 10px;" name ="ticketComments" id="ticketComments" class="form-control" placeholder="Enter Description..."></textarea>
+                    <textarea style="height: 100px; margin-bottom: 10px;" name ="ticketComments" id="ticketComments" class="form-control" placeholder="Enter Description..."></textarea>
                     <button style="float: right; border: #04354d; background-color: #04354d;" type = "submit" class="btn btn-primary">Create Ticket</button>
                 </form>
             </div>
@@ -139,6 +141,11 @@ what else?
                                     <p>
                                     {% endif %}
                                     {{ ticket.Status }}</p>
+                                    <button type="button" class="close" onClick="delete_ticket({ticket.ticketID})">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+                                            <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                                        </svg>
+                                    </button>
                                     <form method="POST">
                                         <input type="hidden" name="changeStatus" id="changeStatus">
                                         <input type="hidden" name="ticketID" id="ticketID" value="{{ticket.ticketID}}">
